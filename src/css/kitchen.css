@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+
+@layer base {
+    body {
+        @apply font-app text-[14px];
+    }
+}
+@layer components{
+    .wrapper {
+        @apply relative w-full min-h-screen bg-grey-200;
+    }
+    /** SIDEBAR **/
+    .sidebar {
+        @apply fixed bg-blue-500 w-[250px] min-h-screen z-30;
+    }
+    .brand {
+        @apply w-full min-h-[60px] flex flex-row justify-between items-center py-2 mb-3;
+    }
+    .brand-logo img {
+        @apply w-[40px] h-[40px] ml-4;
+    }
+    .brand-name {
+        @apply pr-6 text-xl;
+    }
+    .sidebar-footer {
+        @apply flex flex-row items-center justify-between px-2;
+        @apply absolute bottom-0 text-white;
+        @apply min-h-[50px] bg-gradient-to-br from-transparent to-blue-600 w-full backdrop-blur-lg;
+    }
+    .user-profile {
+        @apply flex items-center gap-2;
+    }
+    .user-profile img{
+        @apply w-8 h-8;
+    }
+    .sidebar-footer a {
+        @apply text-xl;
+    }
+    .sidebar-main {
+        @apply text-lg ;
+    }
+    .sidebar-main ul li {
+        @apply flex items-center justify-between w-full;
+    }
+    .sidebar-main ul li a{
+        @apply w-full p-2;
+    }
+    .sidebar-main ul li i {
+        @apply pr-2;
+    }
+    /* END SIDEBAR */
+
+    .main-wrapper {
+        @apply ml-[250px] relative; 
+    }
+    .navbar-control {
+        @apply absolute top-[16px] -left-[14px] rounded-3xl w-7 h-7 text-center text-[20px] z-50 bg-white shadow-lg;
+    }
+    .navbar {
+        @apply bg-white text-[18px] py-4 px-5 min-h-[60px];
+    }
+    .nav-left {
+        @apply relative float-left;
+    }
+    .nav-right {
+        @apply relative float-right;
+    }
+    .content {
+        @apply px-3 mt-6;
+    }
+}

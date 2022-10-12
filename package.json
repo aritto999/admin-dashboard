@@ -1,0 +1,23 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/css/kitchen.css -o ./dist/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aritto999/admin-dashboard.git"
+  },
+  "author": "Arif Purwanto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aritto999/admin-dashboard/issues"
+  },
+  "homepage": "https://github.com/aritto999/admin-dashboard#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
