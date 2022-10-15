@@ -41,15 +41,31 @@
     .sidebar-main {
         @apply text-lg ;
     }
-    .sidebar-main ul li {
-        @apply flex items-center justify-between w-full;
+    .sidebar-main li:hover::before{
+        content: ' ';
+        @apply absolute w-[55px] h-full rounded-tr-lg rounded-br-lg bg-blue-800 -z-10;
     }
-    .sidebar-main ul li a{
-        @apply w-full p-2;
+    .sidebar-main li {
+        @apply relative mb-2 flex;
     }
-    .sidebar-main ul li i {
-        @apply pr-2;
+
+    .menu {
+        @apply py-2 w-full text-lg relative flex flex-row align-middle text-blue-800;
     }
+    .menu:hover {
+        @apply text-white
+    }
+    .active {
+        @apply text-white -z-10 w-[55px] rounded-tr-lg rounded-br-lg bg-blue-800;
+    }
+    .menu i {
+        line-height: 1.5;
+        @apply mr-6 ml-5;
+    }
+    .menu span {
+        @apply place-self-end;
+    }
+    
     /* END SIDEBAR */
 
     .main-wrapper {
