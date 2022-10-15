@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer components {
+    .wrapper {
+        @apply min-w-full min-h-screen bg-navy-200;
+    }
+
+    /** =========== SIDEBAR ============*/
+    .sidebar {
+        @apply w-[70px] absolute top-0 bottom-0 left-0 sm:w-[250px] bg-navy-600;
+        @apply transition-[width] duration-500 ease-in-out;
+    }
+    
+    .sidebar header {
+        @apply relative mb-5 overflow-hidden;
+    }
+    .sidebar header .brand{
+        @apply flex flex-grow-0 flex-shrink-0 align-middle;
+    }
+    .brand-logo {
+        @apply flex items-center justify-center flex-grow-0 flex-shrink-0 w-[70px];
+    }
+    .brand-logo img {
+        @apply w-10 h-auto;
+    }
+    .brand-info {
+        @apply flex flex-col flex-grow-0 flex-shrink-0 text-white;
+    }
+    .brand-name {
+        @apply text-[20px];
+    }
+    .brand-tagline {
+        @apply text-[14px];
+    }
+    .toogle-sidebar {
+        @apply text-navy-600 text-[20px];
+        @apply absolute top-[10px] -right-4 flex justify-center items-center;
+        @apply p-1 bg-white cursor-pointer rounded-2xl;
+        @apply drop-shadow-[0px_0px_20px_rgba(255,255,255,0.50)] ;
+    }
+
+    /** ===== SIDEBAR MENU ===== */ 
+    /* .menu-link {
+        @apply relative overflow-hidden;
+    } */
+    .menu-link a{
+        @apply flex items-center;
+    }
+    .menu-bar > .menu-link, 
+    .submenu > .menu-link {
+        @apply relative overflow-hidden ;
+    }
+    .menu-bar > .menu-link {
+        @apply py-2 ml-2;
+    }
+    .submenu {
+        @apply ml-4
+    }
+    .menu-bar > .menu-link:not(:last-child){
+        @apply mb-1;
+    }
+    .menu-bar > .menu-link {
+        @apply rounded-tl-3xl rounded-bl-3xl;
+    }
+    .menu-bar > .menu-link.submenu-expand {
+        @apply rounded-tl-3xl rounded-bl-3xl ;
+    }
+    .menu-bar > .menu-link:hover{
+        @apply overflow-visible bg-white;
+    }
+
+    .menu-link:hover .nav-icon, 
+    .menu-link:hover .nav-text, 
+    .menu-link:hover .nav-submenu-icon {
+        @apply text-navy-500
+    }
+    
+    .nav-icon, .nav-text, .nav-submenu-icon {
+        @apply text-[18px] text-white;
+    }
+    .nav-icon {
+        @apply flex items-center justify-center min-w-[40px] pl-3;
+    }
+    .nav-text {
+        @apply ml-[25px]
+    }
+    .nav-submenu-icon {
+        @apply absolute flex my-auto align-middle right-1;
+    }
+    
+    .sidebar-collapse {
+        @apply w-[70px] !important;
+    }
+}

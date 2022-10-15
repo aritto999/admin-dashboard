@@ -46,11 +46,14 @@
         @apply absolute w-[55px] h-full rounded-tr-lg rounded-br-lg bg-blue-800 -z-10;
     }
     .sidebar-main li {
-        @apply relative mb-2 flex;
+        @apply relative mb-2;
     }
 
+    /*.menu {
+        @apply relative flex flex-row w-full py-2 text-lg text-blue-800 align-middle;
+    }*/
     .menu {
-        @apply py-2 w-full text-lg relative flex flex-row align-middle text-blue-800;
+        @apply relative inline-flex w-full py-2 text-lg text-blue-800 align-middle;
     }
     .menu:hover {
         @apply text-white
@@ -60,11 +63,12 @@
     }
     .menu i {
         line-height: 1.5;
-        @apply mr-6 ml-5;
+        @apply ml-5 mr-6;
     }
-    .menu span {
-        @apply place-self-end;
+    .caret {
+        @apply text-right justify-self-end grow-0 shrink-0;
     }
+
     
     /* END SIDEBAR */
 

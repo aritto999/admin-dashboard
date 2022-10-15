@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <title>Web App</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar sidebar-collapse">
+            <i class="bx bx-chevron-left toogle-sidebar"></i>
+            <header>
+                <div class="brand">
+                    <div class="brand-logo">
+                        <img src="./img/brand.png">
+                    </div>
+                    <div class="brand-info">
+                        <span class="brand-name">
+                            Your Company
+                        </span>
+                        <span class="brand-tagline">
+                            Profesional Technology
+                        </span>
+                    </div>
+                </div>
+            </header>
+            <div class="menu">
+                <ul class="menu-bar">
+                    <li class="menu-link">
+                        <a href="#" class="link">
+                            <i class="bx bxs-dashboard nav-icon"></i>
+                            <span class="nav-text">Dashboard</span>
+                            <span class="nav-submenu-icon">
+                                <i class="bx bx-chevron-right"></i>
+                            </span>
+                        </a>
+                        <ul class="hidden submenu">
+                            <li class="menu-link">
+                                <a href="#">
+                                    Submenu 1
+                                </a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#">
+                                    Submenu 2
+                                </a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#">
+                                    Submenu 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-link">
+                        <a href="#">
+                            <i class="bx bx-building-house nav-icon"></i>
+                            <span class="nav-text">Pelanggan</span>
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="#">
+                            <i class="bx bx-water nav-icon"></i>
+                            <span class="nav-text">Rekening</span>
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="#">
+                            <i class="bx bx-donate-blood nav-icon"></i>
+                            <span class="nav-text">Produksi</span>
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="#">
+                            <i class="bx bx-chalkboard nav-icon"></i>
+                            <span class="nav-text">Laporan</span>
+                        </a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="#">
+                            <i class="bx bx-cog nav-icon"></i>
+                            <span class="nav-text">Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script>
+        let toogleSidebar = document.querySelector(".toogle-sidebar");
+        let sidebar = document.querySelector(".sidebar");
+        toogleSidebar.onclick = () => {
+            sidebar.classList.toggle("sidebar-collapse");
+            console.log(sidebar.classList.contains("sidebar-collapse"));
+            if(sidebar.classList.contains("sidebar-collapse")){
+                toogleSidebar.classList.replace("bx-chevron-left", "bx-chevron-right");
+            } else {
+                toogleSidebar.classList.replace("bx-chevron-right", "bx-chevron-left");
+            }
+        }
+        let link = document.querySelector(".link");
+        link.onclick = () => {
+            let parent = link.parentElement;
+            if(parent.children.length > 1){
+
+                let submenu = parent.children.item(1);
+                submenu.classList.toggle("hidden");
+                parent.classList.toggle("submenu-expand");
+            }
+            console.log(parent.children);
+        }
+    </script>
+</body>
+</html>
