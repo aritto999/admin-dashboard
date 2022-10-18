@@ -55,9 +55,7 @@
     .menu-bar > .menu-link {
         @apply py-2 ml-2;
     }
-    .submenu {
-        @apply ml-4
-    }
+    
     .menu-bar > .menu-link:not(:last-child){
         @apply mb-1;
     }
@@ -70,11 +68,23 @@
     .menu-bar > .menu-link:hover{
         @apply overflow-visible bg-white;
     }
-
+    .menu-bar > .menu-link:hover > .submenu .menu-link{
+        @apply text-navy-300;
+    }
+    .menu-bar > .menu-link:hover > .submenu .menu-link:hover{
+        @apply text-lg text-navy-500;
+    }
     .menu-link:hover .nav-icon, 
     .menu-link:hover .nav-text, 
-    .menu-link:hover .nav-submenu-icon {
-        @apply text-navy-500
+    .menu-link:hover .nav-submenu-icon{
+        @apply text-navy-500;
+    }
+
+    .submenu {
+        @apply ml-4
+    }
+    .submenu .menu-link {
+        @apply py-1 text-navy-300;
     }
     
     .nav-icon, .nav-text, .nav-submenu-icon {

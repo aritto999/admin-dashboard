@@ -672,10 +672,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.submenu {
-  margin-left: 1rem;
-}
-
 .menu-bar > .menu-link:not(:last-child) {
   margin-bottom: 0.25rem;
 }
@@ -696,11 +692,34 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.menu-bar > .menu-link:hover > .submenu .menu-link {
+  --tw-text-opacity: 1;
+  color: rgb(115 126 145 / var(--tw-text-opacity));
+}
+
+.menu-bar > .menu-link:hover > .submenu .menu-link:hover {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(22 40 72 / var(--tw-text-opacity));
+}
+
 .menu-link:hover .nav-icon,  
     .menu-link:hover .nav-text,  
     .menu-link:hover .nav-submenu-icon {
   --tw-text-opacity: 1;
   color: rgb(22 40 72 / var(--tw-text-opacity));
+}
+
+.submenu {
+  margin-left: 1rem;
+}
+
+.submenu .menu-link {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(115 126 145 / var(--tw-text-opacity));
 }
 
 .nav-icon,  .nav-text,  .nav-submenu-icon {
